@@ -1,18 +1,21 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
+const myCustomQueries = {
+  xs: "(max-width: 320px)",
+  mobile: "(max-width: 768px)",
+  md: "(max-width: 1025px)",
+  l: "(max-width: 1536px)",
+  xl: "(min-width: 1536px)",
+  portrait: "(orientation: portrait)",
+  tablet: "(max-width: 1149px)",
+  custom: "(min-width: 1150px)",
+  customLarge: "(min-width: 2550px)"
+}
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Developer`,
+    description: `Cristiana Baiorte`,
+    author: `Cristiana Baiorte`,
+    siteUrl: `https://github.com/cristianafmb/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -21,6 +24,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+        ignore: [`**/\.*`]
       },
     },
     `gatsby-transformer-sharp`,
@@ -39,5 +50,45 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-htaccess',
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+        queries: myCustomQueries,
+      },
+    },
+    'gatsby-transformer-json',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`pt`],
+        defaultLanguage: `pt`,
+        siteUrl: `https://fozdeprata.pt/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: true,
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    }
   ],
 }

@@ -1,0 +1,16 @@
+.container-starting-animation{
+    height: 100%;
+    width: 100%;
+    row-gap: 5vh;
+    svg{
+        height: 100%;
+        max-width: 80vw;
+        margin: auto;
+    }
+}
+.container-title-general-button{
+    vertical-align: middle;
+    grid-template-columns: 100%;
+    row-gap: 2vh;
+    align-items: center;
+}

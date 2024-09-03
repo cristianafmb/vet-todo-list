@@ -1,0 +1,16 @@
+{
+    "homepage":{
+        "seo":{
+            "title": "Todo List",
+            "description": "O TodoVet é um aplicativo mobile que te ajuda a organizar o seu dia a dia como enfermeiro veterinário.",
+            "image": ""
+        },
+        "intro":{
+            "title": "Hora de começar!",
+            "btn": {
+                "text": "Vamos lá",
+                "link": "/checklist"
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+$blueTitle: #246CA3;
+$blueSubtitle: #71B4CE;
+$salmon: #EF886C;
+$green: #4C6B5F;
+$red: #FD5849;
+$white: #fff;
+$black: #0a0a0a;
+
+
+// FONTS
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.bad-script-regular {
+    font-family: "Bad Script", cursive;
+}
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+}
+
+.blueTitle {
+    color: $blueTitle;
+}
+
+.blueSubtitle {
+    color: $blueSubtitle;
+}
+
+.salmon {
+    color: $salmon;
+}
+
+.green {
+    color: $green;
+}
+
+.red {
+    color: $red;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+.general-button-container {
+    width: 100%;
+    max-width: 50vw;
+    background-color: $salmon;
+    border-radius: 30px;
+
+    .general-button {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        padding: 1vh 5vw;
+        align-items: center;
+    }
+
+    svg {
+        max-width: 20vw !important;
+        max-height: 1.5rem;
+    }
+}
+
+.container-height {
+    height: 80vh;
+}
+
+.form-check-input:checked {
+    background-color: $blueSubtitle !important;
+    border-color: $blueSubtitle !important;
+}
+
+.form-check:has(.form-check-input:checked[type=checkbox]) .form-check-label, .cross-out-text .form-check-label{
+    text-decoration: line-through;
+}
+
+.nav-link.active {
+    background-color: $salmon !important;
+    color: $white !important;
+}
+.nav-link {
+    color: $salmon !important;
+}
+
+.height-65vh{
+    height: 65vh;
+}
+
+.toast{
+    background-color: $blueSubtitle !important;
+}
+
+.two-columns{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5vw;
+}
+
+.container-correct-icon{
+    svg{
+        max-width: 10vw;
+        height: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "checklist": {
+        "seo": {
+            "title": "CheckList",
+            "description": "O TodoVet é um aplicativo mobile que te ajuda a organizar o seu dia a dia como enfermeiro veterinário.",
+            "image": ""
+        },
+        "checklist": {
+            "animal":{
+                "name": "Nome",
+                "age": "Idade",
+                "weight": "Peso (Kg)"
+            },
+            "tabs":{
+                "checklist": "Checklist",
+                "completed": "Completado"
+            },
+            "steps": [
+                "Verificar fugas no sistema",
+                "Verificar nível de isoflurano",
+                "Verificar cuff",
+                "Verificar válvula APL",
+                "1º corte"
+            ],
+            "medication": {
+                "add": "Adicionar medicação",
+                "fields": {
+                    "titleName": "Nome da Medicação",
+                    "titleDose": "Dosagem (mg)"
+                }
+            },
+            "vitalsignals": {
+                "title": "Vamos medir os sinais vitais?",
+                "affirmative": "Vamos a isso!",
+                "subtitle": "Sinais Vitais",
+                "FC": "FC",
+                "FR": "FR",
+                "SO2": "SO2",
+                "CO2": "CO2",
+                "PAM":"PAM"
+            }, 
+            "export":{
+                "title": "Exportar documento",
+                "sharebutton": "Partilhar"
+            }
+        }
+    }
+}
